@@ -32,6 +32,38 @@ namespace Vavatech.CSharp6.HelloWorld
             ReadKey();
         }
 
+        private static void Cast2Test()
+        {
+            var person = new Person
+            {
+                FirstName = "Marcin",
+                LastName = "Sulecki",
+                Weight = 10,
+                Age = 18,
+            };
+
+            // zła praktyka
+            try
+            {
+                Person person2 = (Person)person;
+                Console.WriteLine(person2);
+            }
+            catch(InvalidCastException e)
+            {
+
+            }
+            
+            // dobra praktyka
+            Person person3 = person as Person; 
+
+            if (person3 != null)
+            {
+                Console.WriteLine(person3);
+            }
+
+
+        }
+
         private static void CastTest()
         {
             int x = 10;
