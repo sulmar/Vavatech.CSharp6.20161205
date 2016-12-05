@@ -38,11 +38,7 @@ namespace Vavatech.CSharp6.HelloWorld
 
         private static void ArrayTest()
         {
-            int[] array = new int[5];
-
-            array[0] = 10;
-            array[1] = 5;
-
+            int[] array = new int[] { 10, 5, 0, 5 };
 
         }
 
