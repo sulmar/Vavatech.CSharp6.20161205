@@ -15,11 +15,22 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
-            CalculateTest();
+            CalculateAddTest();
+
+            // CalculateTest();
 
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void CalculateAddTest()
+        {
+            Services.Calculator calculator = new Services.Calculator();
+
+            int result = calculator.Add(10, 5, 4);
+
+            WriteLine($"Result: {result}");
         }
 
         private static void CalculateTest()
