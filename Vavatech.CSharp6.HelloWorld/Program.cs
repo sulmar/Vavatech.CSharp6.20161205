@@ -5,6 +5,7 @@ using static System.Math;
 using static System.Console;
 using Vavatech.CSharp6.HelloWorld.Models;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
@@ -13,6 +14,8 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            GenericListTest();
+
             ArrayListTest();
 
             ArrayTest();
@@ -37,6 +40,24 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void GenericListTest()
+        {
+            List<Person> persons = new List<Person>();
+
+            persons.Add(new Person { FirstName = "Marcin" });
+
+            persons.Add(new Person { FirstName = "Marcin" });
+
+            persons.Add(new Person { FirstName = "Leszek" });
+
+            persons.Add(new Person { FirstName = "Leszek" });
+
+            foreach (var person in persons)
+            {
+                Console.WriteLine(person);
+            }
         }
 
         private static void ArrayListTest()
