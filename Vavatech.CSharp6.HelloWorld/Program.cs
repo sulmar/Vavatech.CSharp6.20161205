@@ -51,11 +51,15 @@ namespace Vavatech.CSharp6.HelloWorld
                 Age = 18,
             };
 
-            PersonInfo personInfo = new PersonInfo();
-            personInfo.FirstName = person.FirstName;
-            personInfo.LastName = person.LastName;
+            // Klasa anonimowa
+            var personInfo = new
+            {
+                Imie = person.FirstName,
+                Nazwisko = person.LastName,
+                Wiek = person.Weight,
+            };
 
-            Console.WriteLine($"{personInfo.FirstName} {personInfo.LastName}");
+            Console.WriteLine($"{personInfo.Imie} {personInfo.Nazwisko}");
 
         }
 
