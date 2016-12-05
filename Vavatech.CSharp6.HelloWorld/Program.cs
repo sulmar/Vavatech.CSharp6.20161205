@@ -12,6 +12,8 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            ArrayTest();
+
             Cast2Test();
 
             CastTest();
@@ -32,6 +34,16 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void ArrayTest()
+        {
+            int[] array = new int[5];
+
+            array[0] = 10;
+            array[1] = 5;
+
+
         }
 
         private static void Cast2Test()
