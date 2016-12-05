@@ -14,6 +14,8 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            GenericTest();
+
             GenericListTest();
 
             ArrayListTest();
@@ -40,6 +42,18 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void GenericTest()
+        {
+            var printer = new Printer<DateTime>();
+
+            //printer.Print(100);
+            //printer.Print(DateTime.Now);
+
+            //var person = new Person { FirstName = "Marcin" };
+            //printer.Print(person);
+
         }
 
         private static void GenericListTest()
