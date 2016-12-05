@@ -3,18 +3,17 @@ using My = Vavatech.CSharp6.Logic;
 // C# 6.0
 using static System.Math;
 using static System.Console;
+using Vavatech.CSharp6.HelloWorld.Models;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
-    class Person
-    {
-
-    }
-
+    
     class Program
     {
         static void Main(string[] args)
         {
+            Var2Test();
+
             VarTest();
 
 
@@ -38,6 +37,23 @@ namespace Vavatech.CSharp6.HelloWorld
 
 
             Console.WriteLine(x);
+        }
+
+
+        private static void Var2Test()
+        {
+            Person person = new Person();
+            person.FirstName = "Marcin";
+            person.LastName = "Sulecki";
+            person.Weight = 10;
+            person.Age = 18;
+
+            PersonInfo personInfo = new PersonInfo();
+            personInfo.FirstName = person.FirstName;
+            personInfo.LastName = person.LastName;
+
+            Console.WriteLine($"{personInfo.FirstName} {personInfo.LastName}");
+
         }
 
         private static void ParameterOutTest()
