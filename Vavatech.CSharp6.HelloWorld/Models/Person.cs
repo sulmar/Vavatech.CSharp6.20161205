@@ -8,13 +8,26 @@ namespace Vavatech.CSharp6.HelloWorld.Models
 {
     class Person
     {
-        public string FirstName;
+        public int PersonId { get; set; }
 
-        public string LastName;
+        private string _FirstName;
+
+        public string FirstName
+        {
+            get { return _FirstName; }
+            set { _FirstName = value; }
+        }
+
+
+        public string LastName { get; set; }
+
+
 
         public double Weight;
 
-        private short _Age;
+        #region Age
+
+        private short _Age { get; set; }
 
         public short Age
         {
@@ -32,6 +45,8 @@ namespace Vavatech.CSharp6.HelloWorld.Models
             }
         }
 
+        #endregion
+
         //public short GetAge()
         //{
         //    return this.Age;
@@ -45,7 +60,7 @@ namespace Vavatech.CSharp6.HelloWorld.Models
         //    }
         //}
 
-      
+
 
         public string FullName 
         {
