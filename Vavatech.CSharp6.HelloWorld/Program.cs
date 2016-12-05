@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using My = Vavatech.CSharp6.Logic;
 using Services = Vavatech.CSharp6.HelloWorld.Services;
+// C# 6.0
+using static System.Math;
+using static System.Console;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
@@ -12,32 +15,34 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WriteLine("Hello World!");
 
-            Console.WriteLine("Podaj imię");
+            WriteLine("Podaj imię");
 
-            string firstname = Console.ReadLine();
+            string firstname = ReadLine();
 
-            Console.WriteLine("Podaj nazwisko");
+            WriteLine("Podaj nazwisko");
 
-            string lastname = Console.ReadLine();
+            string lastname = ReadLine();
 
             double weight = 10.123;
 
             // C# 6.0 Interpolacja
             string fullname = $"{firstname} {lastname} {weight:N2} {DateTime.Now:yyyy-MM-dd HH.mm}";
 
-            Console.WriteLine(fullname);
+            WriteLine(fullname);
 
             Services.Calculator calculator1 = new Services.Calculator();
 
             My.Calculator calculator2 = new My.Calculator();
 
 
-            
-            Console.WriteLine("Press any key to exit.");
+            double result = Sqrt(Sin(weight));
 
-            Console.ReadKey();
+            
+            WriteLine("Press any key to exit.");
+
+            ReadKey();
         }
     }
 }
