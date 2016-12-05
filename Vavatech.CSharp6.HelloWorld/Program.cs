@@ -20,9 +20,10 @@ namespace Vavatech.CSharp6.HelloWorld
 
             string lastname = Console.ReadLine();
 
-            //string fullname = firstname + " " + lastname;
+            double weight = 10.123;
 
-            string fullname = string.Format("{0} {1} {2:N2} {3:yyyy-MM-dd HH.mm}", firstname, lastname, 10.123, DateTime.Now);
+            // C# 6.0 Interpolacja
+            string fullname = $"{firstname} {lastname} {weight:N2} {DateTime.Now:yyyy-MM-dd HH.mm}";
 
             Console.WriteLine(fullname);
 
