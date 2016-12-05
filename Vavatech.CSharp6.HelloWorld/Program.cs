@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vavatech.CSharp6.Logic;
-using Vavatech.CSharp6.HelloWorld.Services;
+using My = Vavatech.CSharp6.Logic;
+using Services = Vavatech.CSharp6.HelloWorld.Services;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
@@ -29,7 +29,10 @@ namespace Vavatech.CSharp6.HelloWorld
 
             Console.WriteLine(fullname);
 
-            Vavatech.CSharp6.HelloWorld.Services.Calculator calculator = new Vavatech.CSharp6.HelloWorld.Services.Calculator();
+            Services.Calculator calculator1 = new Services.Calculator();
+
+            My.Calculator calculator2 = new My.Calculator();
+
 
             
             Console.WriteLine("Press any key to exit.");
