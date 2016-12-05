@@ -9,15 +9,7 @@ namespace Vavatech.CSharp6.HelloWorld.Services
     class Calculator
     {
 
-        public int Add(int x, int y)
-        {
-            int result = x + y;
-
-            return result;
-        }
-
-
-        public int Add(int x, int y, int z)
+        public int Add(int x, int y, int z = 0)
         {
             return x + y + z;
         }
