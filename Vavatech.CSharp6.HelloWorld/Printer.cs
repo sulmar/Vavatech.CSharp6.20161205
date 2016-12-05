@@ -7,9 +7,9 @@ using Vavatech.CSharp6.HelloWorld.Models;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
-    class Printer<TItem>
+    class Printer
     {
-        public void Print(TItem x)
+        public void Print<TItem>(TItem x)
         {
             Console.WriteLine($"Printing... {x}");
         }

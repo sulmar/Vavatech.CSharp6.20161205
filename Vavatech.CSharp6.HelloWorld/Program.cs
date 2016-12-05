@@ -46,13 +46,13 @@ namespace Vavatech.CSharp6.HelloWorld
 
         private static void GenericTest()
         {
-            var printer = new Printer<DateTime>();
+            var printer = new Printer();
 
-            //printer.Print(100);
-            //printer.Print(DateTime.Now);
+            printer.Print<string>("Hello");
+            printer.Print<DateTime>(DateTime.Now);
 
-            //var person = new Person { FirstName = "Marcin" };
-            //printer.Print(person);
+            var person = new Person { FirstName = "Marcin" };
+            printer.Print<Person>(person);
 
         }
 
