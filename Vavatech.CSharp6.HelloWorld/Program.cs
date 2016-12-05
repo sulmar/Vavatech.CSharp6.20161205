@@ -15,6 +15,9 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            VarTest();
+
+
             ParameterOutTest();
 
 
@@ -25,6 +28,16 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void VarTest()
+        {
+            var x = 10.5m;
+
+            // x = "Hello";
+
+
+            Console.WriteLine(x);
         }
 
         private static void ParameterOutTest()
