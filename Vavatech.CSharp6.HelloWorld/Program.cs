@@ -28,7 +28,7 @@ namespace Vavatech.CSharp6.HelloWorld
         {
             Services.Calculator calculator = new Services.Calculator();
 
-            int result = calculator.Add(10, 5, 4);
+            int result = calculator.Add(10, 5, description: "Opis");
 
             WriteLine($"Result: {result}");
         }
