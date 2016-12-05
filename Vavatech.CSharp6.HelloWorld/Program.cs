@@ -1,19 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using My = Vavatech.CSharp6.Logic;
-using Services = Vavatech.CSharp6.HelloWorld.Services;
 // C# 6.0
 using static System.Math;
 using static System.Console;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
+    class Person
+    {
+
+    }
+
     class Program
     {
         static void Main(string[] args)
+        {
+            CalculateTest();
+
+            WriteLine("Press any key to exit.");
+
+            ReadKey();
+        }
+
+        private static void CalculateTest()
         {
             WriteLine("Hello World!");
 
@@ -36,13 +45,16 @@ namespace Vavatech.CSharp6.HelloWorld
 
             My.Calculator calculator2 = new My.Calculator();
 
+            double result = Sin(weight);
 
-            double result = Sqrt(Sin(weight));
+            WriteLine($"Rezultat: {result}");
+        }
 
-            
-            WriteLine("Press any key to exit.");
+        private static void CalculatorTest()
+        {
 
-            ReadKey();
         }
     }
+
+
 }
