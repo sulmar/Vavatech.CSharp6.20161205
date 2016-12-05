@@ -12,6 +12,8 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            Cast2Test();
+
             CastTest();
 
 

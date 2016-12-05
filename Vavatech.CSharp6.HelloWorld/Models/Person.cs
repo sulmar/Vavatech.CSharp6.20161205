@@ -15,5 +15,19 @@ namespace Vavatech.CSharp6.HelloWorld.Models
         public double Weight;
 
         public short Age;
+
+        public string FullName 
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
+            
+
+        public override string ToString()
+        {
+            return FullName;
+        }
     }
 }
