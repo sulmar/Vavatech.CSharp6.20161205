@@ -47,6 +47,19 @@ namespace Vavatech.CSharp6.HelloWorld
 
             Console.WriteLine(number);
 
+
+            Person[] persons = new Person[]
+            {
+                new Person {FirstName = "Marcin" },
+                new Person {FirstName = "Marcin" },
+                new Person {FirstName = "Leszek" },
+            };
+
+            foreach (var person in persons)
+            {
+                Console.WriteLine(person);
+            }
+
         }
 
         private static void Cast2Test()
