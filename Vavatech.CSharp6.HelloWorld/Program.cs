@@ -38,7 +38,14 @@ namespace Vavatech.CSharp6.HelloWorld
 
         private static void ArrayTest()
         {
-            int[] array = new int[] { 10, 5, 0, 5 };
+
+            // C# 6.0
+            int[] array = { 10, 5, 0, 5 };
+
+
+            int number = array[3];
+
+            Console.WriteLine(number);
 
         }
 
