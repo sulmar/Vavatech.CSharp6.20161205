@@ -13,5 +13,13 @@ namespace Vavatech.CSharp6.HelloWorld.Services
         {
             return x + y + z;
         }
+
+        public bool TryAdd(int x, int y, out int result)
+        {
+            result = x + y;
+
+            return result <= 100;
+
+        }
     }
 }

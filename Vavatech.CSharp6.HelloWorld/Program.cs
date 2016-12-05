@@ -15,6 +15,9 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            ParameterOutTest();
+
+
             CalculateAddTest();
 
             // CalculateTest();
@@ -22,6 +25,23 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void ParameterOutTest()
+        {
+
+            Services.Calculator calculator = new Services.Calculator();
+
+            int result;
+
+            if (calculator.TryAdd(99, 5, out result))
+            {
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine("Wynik poza zakresem");
+            }
         }
 
         private static void CalculateAddTest()
