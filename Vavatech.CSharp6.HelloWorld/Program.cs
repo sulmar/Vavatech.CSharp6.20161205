@@ -11,6 +11,21 @@ namespace Vavatech.CSharp6.HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            Console.WriteLine("Podaj imię");
+
+            string firstname = Console.ReadLine();
+
+            Console.WriteLine("Podaj nazwisko");
+
+            string lastname = Console.ReadLine();
+
+            Console.WriteLine(firstname);
+            Console.WriteLine(lastname);
+            
+            Console.WriteLine("Press any key to exit.");
+
+            Console.ReadKey();
         }
     }
 }
