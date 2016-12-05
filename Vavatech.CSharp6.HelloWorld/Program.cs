@@ -12,6 +12,9 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            CastTest();
+
+
             Var2Test();
 
             VarTest();
@@ -29,6 +32,22 @@ namespace Vavatech.CSharp6.HelloWorld
             ReadKey();
         }
 
+        private static void CastTest()
+        {
+            int x = 10;
+
+            long y = 29;
+
+            x = (int) y;
+
+
+            // Uwaga: inne wyniki!
+            double result1 = x / 3;
+
+            double result2 = x / 3d;
+
+        }
+
         private static void VarTest()
         {
             var x = 10.5m;
@@ -43,7 +62,7 @@ namespace Vavatech.CSharp6.HelloWorld
         private static void Var2Test()
         {
             // Inicjalizator
-            Person person = new Person
+            var person = new Person
             {
                 FirstName = "Marcin",
                 LastName = "Sulecki",
