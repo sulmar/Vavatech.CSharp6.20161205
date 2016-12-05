@@ -20,8 +20,7 @@ namespace Vavatech.CSharp6.HelloWorld
 
             string lastname = Console.ReadLine();
 
-            Console.WriteLine(firstname);
-            Console.WriteLine(lastname);
+            Console.WriteLine(firstname + " " + lastname);
             
             Console.WriteLine("Press any key to exit.");
 
