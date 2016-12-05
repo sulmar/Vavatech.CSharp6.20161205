@@ -20,7 +20,12 @@ namespace Vavatech.CSharp6.HelloWorld
 
             string lastname = Console.ReadLine();
 
-            Console.WriteLine(firstname + " " + lastname);
+            //string fullname = firstname + " " + lastname;
+
+            string fullname = string.Format("{0} {1} {2:N2} {3:yyyy-MM-dd HH.mm}", firstname, lastname, 10.123, DateTime.Now);
+
+            Console.WriteLine(fullname);
+
             
             Console.WriteLine("Press any key to exit.");
 
