@@ -4,6 +4,7 @@ using My = Vavatech.CSharp6.Logic;
 using static System.Math;
 using static System.Console;
 using Vavatech.CSharp6.HelloWorld.Models;
+using System.Collections;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
@@ -12,6 +13,8 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            ArrayListTest();
+
             ArrayTest();
 
             Cast2Test();
@@ -36,6 +39,26 @@ namespace Vavatech.CSharp6.HelloWorld
             ReadKey();
         }
 
+        private static void ArrayListTest()
+        {
+            ArrayList persons = new ArrayList(3);
+
+            persons.Add(new Person { FirstName = "Marcin" });
+
+            persons.Add(new Person { FirstName = "Marcin" });
+
+            persons.Add(new Person { FirstName = "Leszek" });
+
+            persons.Add(new Person { FirstName = "Leszek" });
+
+            persons.Add(800);
+
+            foreach (var person in persons)
+            {
+                Console.WriteLine(person);
+            }
+        }
+
         private static void ArrayTest()
         {
 
@@ -48,7 +71,7 @@ namespace Vavatech.CSharp6.HelloWorld
             Console.WriteLine(number);
 
 
-            Person[] persons = new Person[]
+            Person[] persons = 
             {
                 new Person {FirstName = "Marcin" },
                 new Person {FirstName = "Marcin" },
