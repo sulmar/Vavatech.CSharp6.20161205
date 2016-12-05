@@ -42,11 +42,14 @@ namespace Vavatech.CSharp6.HelloWorld
 
         private static void Var2Test()
         {
-            Person person = new Person();
-            person.FirstName = "Marcin";
-            person.LastName = "Sulecki";
-            person.Weight = 10;
-            person.Age = 18;
+            // Inicjalizator
+            Person person = new Person
+            {
+                FirstName = "Marcin",
+                LastName = "Sulecki",
+                Weight = 10,
+                Age = 18,
+            };
 
             PersonInfo personInfo = new PersonInfo();
             personInfo.FirstName = person.FirstName;
