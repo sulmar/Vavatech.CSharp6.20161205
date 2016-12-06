@@ -6,6 +6,7 @@ using static System.Console;
 using Vavatech.CSharp6.HelloWorld.Models;
 using System.Collections;
 using System.Collections.Generic;
+using Vavatech.CSharp6.HelloWorld.Services;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
@@ -14,6 +15,12 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            ThrowTest();
+
+            ExceptionTest();
+
+            DictionaryTest();
+
             GenericClassTest();
 
             GenericTest();
@@ -44,6 +51,54 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void ThrowTest()
+        {
+            var sender = new Sender<Person>();
+
+            Person person = null;
+
+            // TODO: pobieramy osobe z bazy danych
+
+            // sender.Send(person);
+
+            var calculator = new Calculator();
+            var result = calculator.Add(103, 0, 4);
+
+
+        }
+
+        private static void ExceptionTest()
+        {
+            try
+            {
+                Console.WriteLine("Podaj datę");
+                var input = Console.ReadLine();
+
+                DateTime date = DateTime.Parse(input);
+
+                // ...
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+          
+        }
+
+        private static void DictionaryTest()
+        {
+            var holidays = new Dictionary<string, DateTime>();
+
+            holidays.Add("1 maja", DateTime.Parse("2017-05-01"));
+            holidays.Add("3 maja", DateTime.Parse("2017-05-03"));
+
+            foreach (var holiday in holidays)
+            {
+                Console.WriteLine(holiday);
+            }
         }
 
         private static void GenericClassTest()

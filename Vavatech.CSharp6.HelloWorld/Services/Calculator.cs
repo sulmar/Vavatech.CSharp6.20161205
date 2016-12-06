@@ -11,6 +11,16 @@ namespace Vavatech.CSharp6.HelloWorld.Services
 
         public int Add(int x, int y, int z = 0, string description = "")
         {
+            if (x < 0 || x > 100)
+                throw new ArgumentOutOfRangeException(nameof(x));
+
+            if (y < 0 || y > 100)
+                throw new ArgumentOutOfRangeException(nameof(y));
+
+            if (z < 0 || z > 100)
+                throw new ArgumentOutOfRangeException(nameof(z));
+
+
             return x + y + z;
         }
 

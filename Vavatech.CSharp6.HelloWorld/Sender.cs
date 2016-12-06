@@ -13,7 +13,16 @@ namespace Vavatech.CSharp6.HelloWorld
 
         public void Send(TItem item)
         {
+            if (item == null)
+                throw new ArgumentNullException(nameof(item));
+
+
+
+
             this.item = item;
+
+            var type = item.GetType();
+
             Console.WriteLine($"Sending {item}");
         }
 
