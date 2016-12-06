@@ -12,7 +12,12 @@ namespace Networks.Netis.XmlWebServiceClient.Services
     {
         public void Add(Site site)
         {
-            throw new NotImplementedException();
+            localhost.NetisService service = new localhost.NetisService();
+
+            var dtoSite = Map(site);
+
+            service.AddSite(dtoSite);
+
         }
 
         public List<Site> Get()
@@ -49,9 +54,29 @@ namespace Networks.Netis.XmlWebServiceClient.Services
             return site;
         }
 
+        private localhost.Site Map(Site site)
+        {
+            var sitedtoSite = new localhost.Site
+            {
+                SiteId = site.SiteId,
+                Code = site.Code,
+                MachineName = site.MachineName,
+                Name = site.Name,
+            };
+
+            return sitedtoSite;
+
+        }
+
         public Site Get(string code)
         {
-            throw new NotImplementedException();
+            localhost.NetisService service = new localhost.NetisService();
+
+            var dtoSite = service.GetSite(code);
+
+            var site = Map(dtoSite);
+
+            return site;
         }
 
         public void Remove(int siteId)

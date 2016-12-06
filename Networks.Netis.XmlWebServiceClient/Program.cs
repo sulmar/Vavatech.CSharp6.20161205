@@ -15,6 +15,8 @@ namespace Networks.Netis.XmlWebServiceClient
 
             GetSitesTest();
 
+            GetSiteTest();
+
 
             Console.WriteLine("Press any key to exit.");
 
@@ -33,5 +35,28 @@ namespace Networks.Netis.XmlWebServiceClient
                 Console.WriteLine(site.Code);
             }
         }
+
+        private static void GetSiteTest()
+        {
+            Console.WriteLine("Podaj kod stacji");
+
+            var code = Console.ReadLine();
+
+            ISitesService sitesService = new XmlWebServiceSitesService();
+
+            var site = sitesService.Get(code);
+
+            if (site!=null)
+            {
+                Console.WriteLine($"Znaleziono stację {site.Name}");
+            }
+            else
+            {
+                Console.WriteLine("Stacja nieznaleziona");
+            }
+
+
+        }
+
     }
 }
