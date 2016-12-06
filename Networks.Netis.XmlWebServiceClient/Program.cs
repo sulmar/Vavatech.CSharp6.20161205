@@ -14,6 +14,12 @@ namespace Networks.Netis.XmlWebServiceClient
         {
 
             GetSitesTest();
+
+
+            Console.WriteLine("Press any key to exit.");
+
+
+            Console.ReadKey();
         }
 
         private static void GetSitesTest()
@@ -24,7 +30,7 @@ namespace Networks.Netis.XmlWebServiceClient
 
             foreach (var site in sites)
             {
-                Console.WriteLine(site);
+                Console.WriteLine(site.Code);
             }
         }
     }
