@@ -15,6 +15,9 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            AbstractClassTest();
+
+
             ThrowTest();
 
             ExceptionTest();
@@ -51,6 +54,25 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void AbstractClassTest()
+        {
+            Document document = new Invoice
+            {
+                DocumentId = 1,
+                DueDate = DateTime.Today.AddDays(7),
+                Number = "FV 001/2016",
+                Price = 1000m
+            };
+
+            document.Print();
+
+
+
+            document = new Bill { PaymentType = "CreditCard" };
+
+            document.Print();
         }
 
         private static void ThrowTest()

@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Printer.cs" />
     <Compile Include="Program.cs" />
