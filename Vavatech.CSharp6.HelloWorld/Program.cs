@@ -14,6 +14,8 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            GenericClassTest();
+
             GenericTest();
 
             GenericListTest();
@@ -44,18 +46,30 @@ namespace Vavatech.CSharp6.HelloWorld
             ReadKey();
         }
 
+        private static void GenericClassTest()
+        {
+            var sender = new Sender<int>();
+            sender.Send(100);
+
+            var result = sender.GetItem();
+
+            Console.WriteLine(result);
+        }
+
         private static void GenericTest()
         {
             var printer = new Printer();
 
-            printer.Print<string>("Hello");
-            printer.Print<DateTime>(DateTime.Now);
+            printer.Print("Hello");
+            printer.Print(DateTime.Now);
 
             var person = new Person { FirstName = "Marcin" };
-            printer.Print<Person>(person);
+            printer.Print(person);
+
+            printer.Print(100);
 
         }
-
+        
         private static void GenericListTest()
         {
             List<Person> persons = new List<Person>();
