@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Networks.Netis.XmlWebServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Networks.Netis.XmlWebServiceClient", "Networks.Netis.XmlWebServiceClient\Networks.Netis.XmlWebServiceClient.csproj", "{6BA7D96F-F4B0-4B29-8F4E-776B60D06F29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Networks.Netis.WebApiService", "Networks.Netis.WebApiService\Networks.Netis.WebApiService.csproj", "{C123948C-C3EF-449A-95AD-CE08541C5D90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{6BA7D96F-F4B0-4B29-8F4E-776B60D06F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BA7D96F-F4B0-4B29-8F4E-776B60D06F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BA7D96F-F4B0-4B29-8F4E-776B60D06F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C123948C-C3EF-449A-95AD-CE08541C5D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C123948C-C3EF-449A-95AD-CE08541C5D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C123948C-C3EF-449A-95AD-CE08541C5D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C123948C-C3EF-449A-95AD-CE08541C5D90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

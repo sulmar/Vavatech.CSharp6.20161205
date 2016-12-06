@@ -12,9 +12,9 @@ namespace Networks.Netis.MockServices
     {
         private static List<Site> _Sites = new List<Site>
         {
-            new Site2G { SiteId = 1, Code = "1100", Name = "Olesińska 2G", MachineName = "BTS 1100" },
-            new Site2G { SiteId = 2, Code = "1200", Name = "Dworzec Centralny 2G", MachineName = "BTS 1200" },
-            new Site2G { SiteId = 3, Code = "1400", Name = "Pałac Kultury", MachineName = "BTS 1400" },
+            new Site { SiteId = 1, Code = "1100", Name = "Olesinska 2G", MachineName = "BTS 1100" },
+            new Site { SiteId = 2, Code = "1200", Name = "Dworzec Centralny 2G", MachineName = "BTS 1200" },
+            new Site { SiteId = 3, Code = "1400", Name = "Palac Kultury", MachineName = "BTS 1400" },
         };
 
         public void Add(Site site)
