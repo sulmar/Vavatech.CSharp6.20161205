@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Networks.Netis.MockServices
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Networks.Netis.UnitTests", "Networks.Netis.UnitTests\Networks.Netis.UnitTests.csproj", "{808A796C-5212-46A3-A948-F167E13F362E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Networks.Netis.XmlWebService", "Networks.Netis.XmlWebService\Networks.Netis.XmlWebService.csproj", "{D18DB9CE-62D0-4CDE-8ED3-6AD3AB53D422}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{808A796C-5212-46A3-A948-F167E13F362E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{808A796C-5212-46A3-A948-F167E13F362E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{808A796C-5212-46A3-A948-F167E13F362E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18DB9CE-62D0-4CDE-8ED3-6AD3AB53D422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18DB9CE-62D0-4CDE-8ED3-6AD3AB53D422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18DB9CE-62D0-4CDE-8ED3-6AD3AB53D422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18DB9CE-62D0-4CDE-8ED3-6AD3AB53D422}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
