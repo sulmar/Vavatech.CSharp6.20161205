@@ -22,5 +22,9 @@ namespace Vavatech.CSharp6.HelloWorld.Models
         {
             return Price * 0.23m;
         }
+
+
+
+    
     }
 }

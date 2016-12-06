@@ -74,11 +74,14 @@ namespace Vavatech.CSharp6.HelloWorld
             document.Print();
 
 
-            document = new Correction
+            Document correction = new Correction
             {
                 DocumentId = 10,
                 Price = 400,
             };
+
+            correction.Archive();
+
 
             document.Print();
         }

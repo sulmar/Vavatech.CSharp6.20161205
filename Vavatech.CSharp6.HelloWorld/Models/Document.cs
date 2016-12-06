@@ -22,9 +22,16 @@ namespace Vavatech.CSharp6.HelloWorld.Models
 
             Console.WriteLine($"Tax: {tax}");
 
+            Archive();
 
         }
 
         public abstract decimal GetTax();
+
+
+        public void Archive()
+        {
+            Console.WriteLine("archive");
+        }
     }
 }

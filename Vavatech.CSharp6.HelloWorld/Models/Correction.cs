@@ -17,7 +17,7 @@ namespace Vavatech.CSharp6.HelloWorld.Models
 
             base.Print();
 
-          
+
 
             Console.WriteLine($"Printing...ID: {DocumentId}");
         }
@@ -26,6 +26,11 @@ namespace Vavatech.CSharp6.HelloWorld.Models
         public override decimal GetTax()
         {
             return 100;
+        }
+
+        public new void Archive()
+        {
+            Console.WriteLine("Archive Correction");
         }
     }
 }
