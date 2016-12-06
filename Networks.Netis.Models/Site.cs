@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace Networks.Netis.Models
 {
     [XmlInclude(typeof(Site2G))]
-    public abstract class Site : Base
+    public class Site : Base
     {
         public int SiteId { get; set; }
 

@@ -10,7 +10,7 @@ namespace Networks.Netis.MockServices
 {
     public class MockSitesService : ISitesService
     {
-        private List<Site> _Sites = new List<Site>
+        private static List<Site> _Sites = new List<Site>
         {
             new Site2G { SiteId = 1, Code = "1100", Name = "Olesińska 2G", MachineName = "BTS 1100" },
             new Site2G { SiteId = 2, Code = "1200", Name = "Dworzec Centralny 2G", MachineName = "BTS 1200" },

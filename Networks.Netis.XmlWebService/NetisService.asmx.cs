@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Xml.Serialization;
 
 namespace Networks.Netis.XmlWebService
 {
@@ -41,6 +42,24 @@ namespace Networks.Netis.XmlWebService
             var sites = sitesService.Get();
 
             return sites;
+        }
+
+        [WebMethod]
+        public Site GetSite(string code)
+        {
+            ISitesService sitesService = new MockSitesService();
+
+            var site = sitesService.Get(code);
+
+            return site;
+        }
+
+        [WebMethod]
+        public void AddSite(Site site)
+        {
+            ISitesService sitesService = new MockSitesService();
+
+            sitesService.Add(site);
         }
     }
 }
