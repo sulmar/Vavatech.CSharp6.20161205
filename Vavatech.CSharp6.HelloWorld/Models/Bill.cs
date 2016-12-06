@@ -17,5 +17,10 @@ namespace Vavatech.CSharp6.HelloWorld.Models
 
             Console.WriteLine($"Bill PaymentType {PaymentType}");
         }
+
+        public override decimal GetTax()
+        {
+            return Price * 0.23m;
+        }
     }
 }

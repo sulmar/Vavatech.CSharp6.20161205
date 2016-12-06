@@ -15,7 +15,17 @@ namespace Vavatech.CSharp6.HelloWorld.Models
 
             Console.WriteLine("Init 2");
 
+            base.Print();
+
+          
+
             Console.WriteLine($"Printing...ID: {DocumentId}");
+        }
+
+
+        public override decimal GetTax()
+        {
+            return 100;
         }
     }
 }

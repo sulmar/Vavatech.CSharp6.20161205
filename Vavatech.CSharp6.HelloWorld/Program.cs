@@ -69,13 +69,16 @@ namespace Vavatech.CSharp6.HelloWorld
             document.Print();
 
 
-
-            document = new Bill { PaymentType = "CreditCard" };
+            document = new Bill { PaymentType = "CreditCard", Price = 200 };
 
             document.Print();
 
 
-            document = new Correction();
+            document = new Correction
+            {
+                DocumentId = 10,
+                Price = 400,
+            };
 
             document.Print();
         }

@@ -16,5 +16,11 @@ namespace Vavatech.CSharp6.HelloWorld.Models
 
             Console.WriteLine($"Invoice DueDate: {DueDate}");
         }
+
+
+        public override decimal GetTax()
+        {
+            return Price * 0.23m;
+        }
     }
 }

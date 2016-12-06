@@ -17,6 +17,14 @@ namespace Vavatech.CSharp6.HelloWorld.Models
         public virtual void Print()
         {
             Console.WriteLine("Initialize...");
+
+            var tax = GetTax();
+
+            Console.WriteLine($"Tax: {tax}");
+
+
         }
+
+        public abstract decimal GetTax();
     }
 }
