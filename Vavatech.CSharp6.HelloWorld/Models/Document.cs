@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vavatech.CSharp6.HelloWorld.Models
 {
-    abstract class Document
+    abstract class Document : Base
     {
         public int DocumentId { get; set; }
 
