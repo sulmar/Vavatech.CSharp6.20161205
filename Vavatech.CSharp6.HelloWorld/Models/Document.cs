@@ -14,22 +14,9 @@ namespace Vavatech.CSharp6.HelloWorld.Models
 
         public decimal Price { get; set; }
 
-        public void Print()
+        public virtual void Print()
         {
-            Console.WriteLine("Printing...");
-
-
-            if (this.GetType()==typeof(Invoice))
-            {
-                var invoice = (Invoice)this;
-                Console.WriteLine($"Invoice DueDate: {invoice.DueDate}");
-            }
-            else
-            if (this.GetType() == typeof(Bill))
-            {
-                var bill = (Bill)this;
-                Console.WriteLine($"Bill PaymentType {bill.PaymentType}");
-            }
+            Console.WriteLine("Initialize...");
         }
     }
 }

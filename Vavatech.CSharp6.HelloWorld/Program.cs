@@ -73,6 +73,11 @@ namespace Vavatech.CSharp6.HelloWorld
             document = new Bill { PaymentType = "CreditCard" };
 
             document.Print();
+
+
+            document = new Correction();
+
+            document.Print();
         }
 
         private static void ThrowTest()

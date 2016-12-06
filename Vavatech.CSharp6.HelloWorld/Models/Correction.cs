@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Vavatech.CSharp6.HelloWorld.Models
 {
-    class Bill : Document
+    class Correction : Document
     {
-        public string PaymentType { get; set; }
-
 
         public override void Print()
         {
-            base.Print();
+            Console.WriteLine("Init 1");
 
-            Console.WriteLine($"Bill PaymentType {PaymentType}");
+            Console.WriteLine("Init 2");
+
+            Console.WriteLine($"Printing...ID: {DocumentId}");
         }
     }
 }
