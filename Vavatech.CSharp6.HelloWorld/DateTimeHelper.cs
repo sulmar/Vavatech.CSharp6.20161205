@@ -1,16 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vavatech.CSharp6.HelloWorld
+namespace Vavatech.CSharp6.Extensions
 {
-    class DateTimeHelper
+    // Extensions method
+    static class DateTimeExtensions
     {
-        public static bool IsHoliday(DateTime date)
+        public static bool IsHoliday(this DateTime date)
         {
             return date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;
+        }
+
+        public static bool IsValid(this HttpClient client)
+        {
+            return true;
         }
     }
 }

@@ -7,6 +7,7 @@ using Vavatech.CSharp6.HelloWorld.Models;
 using System.Collections;
 using System.Collections.Generic;
 using Vavatech.CSharp6.HelloWorld.Services;
+using Vavatech.CSharp6.Extensions;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
@@ -63,11 +64,9 @@ namespace Vavatech.CSharp6.HelloWorld
 
         private static void Test()
         {
-            var isHoliday = DateTimeHelper.IsHoliday(DateTime.Now);
 
-            if (isHoliday)
+            if (DateTime.Now.IsHoliday())
             {
-
                 Console.WriteLine("Wolne!");
             }
             else
