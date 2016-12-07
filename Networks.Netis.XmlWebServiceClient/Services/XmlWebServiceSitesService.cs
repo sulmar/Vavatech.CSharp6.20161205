@@ -5,16 +5,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Networks.Netis.Models;
+using AutoMapper;
 
 namespace Networks.Netis.XmlWebServiceClient.Services
 {
     class XmlWebServiceSitesService : ISitesService
     {
+        public XmlWebServiceSitesService()
+        {
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<localhost.Site, Site>().ReverseMap();
+            });
+        }
+
         public void Add(Site site)
         {
             localhost.NetisService service = new localhost.NetisService();
 
-            var dtoSite = Map(site);
+            var dtoSite = Mapper.Map<Site, localhost.Site>(site);
 
             service.AddSite(dtoSite);
 
@@ -26,46 +35,9 @@ namespace Networks.Netis.XmlWebServiceClient.Services
 
             var dtoSites = service.GetSites();
 
-            var sites = new List<Site>();
-
-            foreach (var dtoSite in dtoSites)
-            {
-                sites.Add(Map(dtoSite));
-            }
+            var sites = Mapper.Map<IEnumerable<localhost.Site>, IEnumerable<Site>>(dtoSites);
 
             return sites.ToList();
-        }
-
-        /// <summary>
-        /// Konwersja DTO -> Model
-        /// </summary>
-        /// <param name="dtoSite"></param>
-        /// <returns></returns>
-        private Site Map(localhost.Site dtoSite)
-        {
-            var site = new Site
-            {
-                SiteId = dtoSite.SiteId,
-                Code = dtoSite.Code,
-                MachineName = dtoSite.MachineName,
-                Name = dtoSite.Name,
-            };
-
-            return site;
-        }
-
-        private localhost.Site Map(Site site)
-        {
-            var sitedtoSite = new localhost.Site
-            {
-                SiteId = site.SiteId,
-                Code = site.Code,
-                MachineName = site.MachineName,
-                Name = site.Name,
-            };
-
-            return sitedtoSite;
-
         }
 
         public Site Get(string code)
@@ -74,7 +46,7 @@ namespace Networks.Netis.XmlWebServiceClient.Services
 
             var dtoSite = service.GetSite(code);
 
-            var site = Map(dtoSite);
+            var site = Mapper.Map<localhost.Site, Site>(dtoSite);
 
             return site;
         }
