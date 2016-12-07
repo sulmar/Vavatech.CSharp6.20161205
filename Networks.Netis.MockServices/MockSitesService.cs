@@ -1,9 +1,9 @@
 ﻿using Networks.Netis.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 using Networks.Netis.Models;
 
 namespace Networks.Netis.MockServices
@@ -42,6 +42,7 @@ namespace Networks.Netis.MockServices
 
         public Site GetByMachineName(string machineName)
         {
+
             foreach (var site in _Sites)
             {
                 if (site.MachineName == machineName)

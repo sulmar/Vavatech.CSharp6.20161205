@@ -15,6 +15,11 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+
+            Test();
+
+
+
             AbstractClassTest();
 
 
@@ -54,6 +59,21 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void Test()
+        {
+            var isHoliday = DateTimeHelper.IsHoliday(DateTime.Now);
+
+            if (isHoliday)
+            {
+
+                Console.WriteLine("Wolne!");
+            }
+            else
+            {
+                Console.WriteLine("Praca...");
+            }
         }
 
         private static void AbstractClassTest()

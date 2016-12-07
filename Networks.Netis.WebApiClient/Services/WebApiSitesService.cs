@@ -66,6 +66,9 @@ namespace Networks.Netis.WebApiClient.Services
         {
             var client = new HttpClient();
 
+
+            client.DefaultRequestHeaders.Add("token", "56435635636");
+
             string request = $"{baseUri}/api/sites?machinename={machineName}";
 
             var response = client.GetAsync(request).Result;
