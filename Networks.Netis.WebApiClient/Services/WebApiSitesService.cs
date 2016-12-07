@@ -77,7 +77,12 @@ namespace Networks.Netis.WebApiClient.Services
 
         public void Remove(int siteId)
         {
-            throw new NotImplementedException();
+            var client = new HttpClient();
+
+            string request = $"{baseUri}/api/sites/{siteId}";
+
+            var response = client.DeleteAsync(request).Result;
+
         }
 
         public void Update(Site site) 

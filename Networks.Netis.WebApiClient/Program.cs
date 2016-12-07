@@ -14,6 +14,8 @@ namespace Networks.Netis.WebApiClient
     {
         static void Main(string[] args)
         {
+            DeleteSiteTest();
+
             UpdateSiteTest();
 
             AddSiteTest();
@@ -28,6 +30,15 @@ namespace Networks.Netis.WebApiClient
             Console.WriteLine("Press any key to exit.");
 
             Console.ReadKey();
+        }
+
+        private static void DeleteSiteTest()
+        {
+            var siteId = 3;
+
+            ISitesService sitesService = new WebApiSitesService();
+
+            sitesService.Remove(siteId);
         }
 
         private static void UpdateSiteTest()

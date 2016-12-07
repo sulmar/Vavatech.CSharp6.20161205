@@ -73,11 +73,9 @@ namespace Networks.Netis.WebApiService.Controllers
             sitesService.Update(site);
         }
 
-        [HttpDelete]
-        public void Remove(int id)
+        [Route("api/sites/{id}")]
+        public void Delete(int id)
         {
-            ISitesService sitesService = new MockSitesService();
-
             sitesService.Remove(id);
         }
     }
