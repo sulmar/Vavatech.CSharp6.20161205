@@ -78,6 +78,11 @@ namespace Networks.Netis.WebApiClient.Services
             return site;
         }
 
+        public List<Site> GetSites(string machineName)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int siteId)
         {
             var client = new HttpClient();

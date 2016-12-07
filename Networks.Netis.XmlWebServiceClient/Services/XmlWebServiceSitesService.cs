@@ -56,6 +56,11 @@ namespace Networks.Netis.XmlWebServiceClient.Services
             throw new NotImplementedException();
         }
 
+        public List<Site> GetSites(string machineName)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int siteId)
         {
             throw new NotImplementedException();

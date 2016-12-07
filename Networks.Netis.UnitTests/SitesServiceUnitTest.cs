@@ -9,6 +9,21 @@ namespace Networks.Netis.UnitTests
     public class SitesServiceUnitTest
     {
         [TestMethod]
+        public void GetSitesTest()
+        {
+
+            var machineName = "BTS";
+
+            ISitesService sitesService = new MockSitesService();
+
+            var sites = sitesService.GetSites(machineName);
+
+            Assert.IsNotNull(sites);
+
+        }
+
+
+        [TestMethod]
         public void GetTest()
         {
             ISitesService sitesService = new MockSitesService();

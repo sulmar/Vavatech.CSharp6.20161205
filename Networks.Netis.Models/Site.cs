@@ -17,5 +17,7 @@ namespace Networks.Netis.Models
         public string Code { get; set; }
 
         public string MachineName { get; set; }
+
+        public Region Region { get; set; }
     }
 }

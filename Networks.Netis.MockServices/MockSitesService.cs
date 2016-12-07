@@ -1,9 +1,9 @@
 ﻿using Networks.Netis.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
 using Networks.Netis.Models;
 
 namespace Networks.Netis.MockServices
@@ -29,15 +29,9 @@ namespace Networks.Netis.MockServices
 
         public Site Get(string code)
         {
-            foreach (var site in _Sites)
-            {
-                if (site.Code == code)
-                {
-                    return site;
-                }
-            }
+            var site = _Sites.Where(s => s.Code == code).SingleOrDefault();
 
-            return null;
+            return site;
         }
 
         public Site GetByMachineName(string machineName)
@@ -52,6 +46,37 @@ namespace Networks.Netis.MockServices
             }
 
             return null;
+        }
+
+        public List<Site> GetSites(string machineName)
+        {
+            var expression = _Sites
+                .Where(site => site.MachineName.StartsWith(machineName))
+                .OrderByDescending(s => s.Code);
+            //  .Select( s => new { Kod = s.Code, Nazwa = s.Name})
+
+
+            var query3 = _Sites
+                .Where(s => s.Region.Name == "WAR")
+                .OrderBy(s => s.Code)
+                .ToList();
+
+
+            var query = from s in _Sites
+                        where s.MachineName.StartsWith(machineName)
+                        orderby s.Code descending
+                        select s;
+
+            var query2 = from s in _Sites
+                        where s.Region.Name == "WAR"
+                        orderby s.Code descending
+                        select s;
+
+
+
+            var sites = expression.ToList();
+           
+            return sites;
         }
 
         public void Remove(int siteId)
