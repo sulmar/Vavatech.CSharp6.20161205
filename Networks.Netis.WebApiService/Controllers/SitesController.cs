@@ -30,6 +30,7 @@ namespace Networks.Netis.WebApiService.Controllers
             return sites;
         }
 
+        [Route("api/sites/{id}")]
         public Site Get(string id)
         {
             var site = sitesService.Get(id);
@@ -38,12 +39,28 @@ namespace Networks.Netis.WebApiService.Controllers
 
         }
 
+        [Route("api/sites/{id:int}")]
+        public Site Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Site GetByMachineName(string machinename)
         {
             var site = sitesService.GetByMachineName(machinename);
 
             return site;
         }
+
+        public Site Get(string region, string type, int distance)
+        {
+            throw new NotImplementedException();
+        }
+
+        //public Site Get([FromUri] SiteSearchCriteria criteria)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         [HttpPost]
         public void Add(Site site)
