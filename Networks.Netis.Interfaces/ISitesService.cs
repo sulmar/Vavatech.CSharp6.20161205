@@ -14,6 +14,9 @@ namespace Networks.Netis.Interfaces
 
         Site Get(string code);
 
+        Site GetByMachineName(string machineName);
+
+
         void Add(Site site);
 
         void Update(Site site);

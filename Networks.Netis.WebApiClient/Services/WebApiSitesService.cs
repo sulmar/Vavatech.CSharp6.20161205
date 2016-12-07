@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Networks.Netis.Models;
 using System.Net.Http;
+using System.Web;
 
 namespace Networks.Netis.WebApiClient.Services
 {
@@ -47,6 +48,19 @@ namespace Networks.Netis.WebApiClient.Services
             var client = new HttpClient();
 
             string request = $"{baseUri}/api/sites/{code}";
+
+            var response = client.GetAsync(request).Result;
+
+            var site = response.Content.ReadAsAsync<Site>().Result;
+
+            return site;
+        }
+
+        public Site GetByMachineName(string machineName)
+        {
+            var client = new HttpClient();
+
+            string request = $"{baseUri}/api/sites?machinename={machineName}";
 
             var response = client.GetAsync(request).Result;
 

@@ -40,6 +40,19 @@ namespace Networks.Netis.MockServices
             return null;
         }
 
+        public Site GetByMachineName(string machineName)
+        {
+            foreach (var site in _Sites)
+            {
+                if (site.MachineName == machineName)
+                {
+                    return site;
+                }
+            }
+
+            return null;
+        }
+
         public void Remove(int siteId)
         {
             throw new NotImplementedException();

@@ -38,6 +38,13 @@ namespace Networks.Netis.WebApiService.Controllers
 
         }
 
+        public Site GetByMachineName(string machinename)
+        {
+            var site = sitesService.GetByMachineName(machinename);
+
+            return site;
+        }
+
         [HttpPost]
         public void Add(Site site)
         {
