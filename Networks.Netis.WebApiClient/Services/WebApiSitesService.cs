@@ -27,7 +27,13 @@ namespace Networks.Netis.WebApiClient.Services
 
         public void Add(Site site)
         {
-            throw new NotImplementedException();
+            var client = new HttpClient();
+
+            string request = $"{baseUri}/api/sites";
+
+            var response = client.PostAsJsonAsync(request, site).Result;
+
+
         }
 
         public List<Site> Get()

@@ -62,8 +62,7 @@ namespace Networks.Netis.WebApiService.Controllers
         //    throw new NotImplementedException();
         //}
 
-        [HttpPost]
-        public void Add(Site site)
+        public void Post(Site site)
         {
             sitesService.Add(site);
         }
