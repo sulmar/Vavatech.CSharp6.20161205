@@ -14,6 +14,8 @@ namespace Networks.Netis.WebApiClient
     {
         static void Main(string[] args)
         {
+            UpdateSiteTest();
+
             AddSiteTest();
 
             GetSiteByMachineNameTest();
@@ -26,6 +28,15 @@ namespace Networks.Netis.WebApiClient
             Console.WriteLine("Press any key to exit.");
 
             Console.ReadKey();
+        }
+
+        private static void UpdateSiteTest()
+        {
+            var site = new Site { SiteId = 3, Name = "BTS 1600", Code = "1600", MachineName = "Jerozolimskie" };
+
+            ISitesService sitesService = new WebApiSitesService();
+
+            sitesService.Update(site);
         }
 
         private static void AddSiteTest()

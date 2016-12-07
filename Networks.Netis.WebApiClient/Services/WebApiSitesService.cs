@@ -80,9 +80,13 @@ namespace Networks.Netis.WebApiClient.Services
             throw new NotImplementedException();
         }
 
-        public void Update(Site site)
+        public void Update(Site site) 
         {
-            throw new NotImplementedException();
+            var client = new HttpClient();
+
+            string request = $"{baseUri}/api/sites/{site.SiteId}";
+
+            var response = client.PutAsJsonAsync(request, site).Result;
         }
     }
 }

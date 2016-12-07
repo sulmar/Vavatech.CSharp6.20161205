@@ -67,6 +67,12 @@ namespace Networks.Netis.WebApiService.Controllers
             sitesService.Add(site);
         }
 
+        [Route("api/sites/{id}")]
+        public void Put(int id, Site site)
+        {
+            sitesService.Update(site);
+        }
+
         [HttpDelete]
         public void Remove(int id)
         {
