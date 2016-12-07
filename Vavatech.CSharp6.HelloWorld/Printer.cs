@@ -7,8 +7,13 @@ using Vavatech.CSharp6.HelloWorld.Models;
 
 namespace Vavatech.CSharp6.HelloWorld
 {
-    class Printer
+    class Printer : IDisposable
     {
+        public void Dispose()
+        {
+            Console.WriteLine("Dispose");
+        }
+
         public void Print<TItem>(TItem x)
         {
             Console.WriteLine($"Printing... {x}");

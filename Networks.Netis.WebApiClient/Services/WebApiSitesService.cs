@@ -27,11 +27,13 @@ namespace Networks.Netis.WebApiClient.Services
 
         public void Add(Site site)
         {
-            var client = new HttpClient();
 
-            string request = $"{baseUri}/api/sites";
+            using (var client = new HttpClient())
+            {
+                string request = $"{baseUri}/api/sites";
 
-            var response = client.PostAsJsonAsync(request, site).Result;
+                var response = client.PostAsJsonAsync(request, site).Result;
+            }
 
 
         }

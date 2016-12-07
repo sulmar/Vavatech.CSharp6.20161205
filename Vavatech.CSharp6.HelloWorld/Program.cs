@@ -16,6 +16,8 @@ namespace Vavatech.CSharp6.HelloWorld
     {
         static void Main(string[] args)
         {
+            DisposeTest();
+
 
             Test();
 
@@ -60,6 +62,18 @@ namespace Vavatech.CSharp6.HelloWorld
             WriteLine("Press any key to exit.");
 
             ReadKey();
+        }
+
+        private static void DisposeTest()
+        {
+            using (var printer = new Printer())
+            { 
+                printer.Print(100);
+
+            }
+
+
+
         }
 
         private static void Test()
